@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:2222}
+  port: ${PORT:12222}
 
 spring:
   application:
@@ -24,17 +24,23 @@ spring:
 #    base-url: http://${ZIPKIN_SERVER}:${ZIPKIN_SERVER_PORT}
 
 eureka:
+
   client:
     serviceUrl:
       defaultZone:  ${DISCOVERY_URL:http://eureka-server:8761}/eureka/
+    #prefer-same-zone-eureka: true
   instance:
     preferIpAddress: true
       #    leaseRenewalIntervalInSeconds: 1
       #    leaseExpirationDurationInSeconds: 2
       #    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    #metadata-map:
+      #zone: zone1
 
 ribbon:
   eureka:
     enabled: true
+
+
 
 

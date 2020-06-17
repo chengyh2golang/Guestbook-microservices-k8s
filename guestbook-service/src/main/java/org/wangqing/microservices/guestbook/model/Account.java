@@ -16,9 +16,12 @@ public class Account {
 		this.number = number;
 	}
 
-	public Integer getId() {
-		return id;
-	}
+//	public Integer getId(int id) {
+//		return this.id;
+//	}
+public Integer getId() {
+	return this.id;
+}
 
 	public void setId(Integer id) {
 		this.id = id;
